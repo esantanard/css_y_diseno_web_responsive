@@ -6,9 +6,10 @@
 body{
     background-color: #02010a;
     font-family: 'Dancing Script', cursive;
+    font-size: 16px;
 }
 
-#contenido{
+#wrapper{
   width: 900px;
   margin: auto;
   animation: AnimacionCuerpo 2s;
@@ -27,8 +28,6 @@ body{
   }
 }
 
-
-
 header{
   background-color: #5b7989;
   border-radius: 10px 10px 0 0;
@@ -41,20 +40,25 @@ header h1{
   float: left;
 }
 
-footer{
-  border-radius: 0 0 10px 10px;
-  background-color: #C6d5c5;
-  flex:
+nav {
+    text-align: right;
+    margin-top: 10px;
 }
+
 nav a{
   color:#FFF;
 }
+
 nav a:nth-child(2){
   margin:0 20px;
 }
 
-a.activo{
+nav a.activo{
   text-decoration: none;
+}
+
+.clear{
+  clear: both;
 }
 
 .princImg{
@@ -64,7 +68,7 @@ a.activo{
 }
 
 .princImg img{
-  width: 80%;
+  width: 90%;
   box-shadow: 2px 2px #02010a;
 }
 
@@ -74,24 +78,66 @@ a.activo{
    flex-flow: row wrap;
    text-align: center;
    padding: 20px 0;
+   transition: 1s;
 }
+
+.secImg a{
+   color: black;
+   font-size:20px;
+   text-decoration: none;
+   font-weight: 900;
+   border-bottom: 1px solid;
+}
+
+.secImg a:hover{
+   border: none;
+}
+
 .secImg img{
   width: 320px;
   box-shadow: 2px 2px #02010a;
+  transition: 1s;
 }
 
-div [class*="box"], img{
-  flex:1 1 50%;
-  transition: 1s;
+div[class*="box"]{
+  flex: 1 1 50%;
 }
 
 .box1 img:hover{
   transform: rotate(10deg);
+  /* transition: 1s; */
   box-shadow: 2px 2px #82c3a6;
 }
 .box2 img:hover{
   transform: translate(20px, -5px);
   box-shadow: 2px 2px #82c3a6;
+}
+
+#galeria{
+  background-color:#d5c75f;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#galeria > div{
+  flex: 1 1 25%;
+  margin: 20px;
+}
+
+#galeria div:nth-child(1){
+  filter: blur(10px);
+}
+
+#galeria div:nth-child(even){
+  filter: grayscale(100%);
+}
+
+#galeria div:nth-child(3){
+  filter: sepia(90%);
+}
+
+.imgp img{
+  max-width:100%;
 }
 
 .pie{
@@ -117,9 +163,10 @@ div [class*="td"]{
   flex: 1 1 15%;
 }
 
-nav {
-    text-align: right;
-    margin-top: 10px;
+footer{
+  border-radius: 0 0 10px 10px;
+  background-color: #C6d5c5;
+  flex:
 }
 
 @media (max-width:899px) {
@@ -127,7 +174,7 @@ nav {
     float: none;
   }
 
-  #contenido{
+  #wrapper{
     max-width: 100%;
     margin: auto;
   }
@@ -135,6 +182,11 @@ nav {
   nav {
       text-align: center;
       margin-top: 20px;
+  }
+
+  #galeria{
+    display:block;
+    padding: 20px 0;
   }
 
   .pie{
@@ -149,4 +201,5 @@ nav {
   .pie > .td:first-child{
     margin: 0
   }
+
 }
