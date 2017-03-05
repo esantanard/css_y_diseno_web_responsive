@@ -5,15 +5,87 @@
 
 body{
     background-color: #02010a;
+    font-family: 'Dancing Script', cursive;
 }
 
 header{
   background-color: #5b7989;
-
+  border-radius: 10px 10px 0 0;
 }
 
 header h1{
   text-shadow: 2px 2px #02010a;
+  color: white;
+}
+
+footer{
+  border-radius: 0 0 10px 10px;
+  background-color: #C6d5c5;
+  flex:
+}
+
+a.activo{
+  text-decoration: none;
+}
+
+.princImg{
+  background-color: #82c3a6;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.princImg img{
+  width: 80%;
+  box-shadow: 2px 2px #02010a;
+}
+
+.secImg{
+   background-color: #d5c75f;
+   display: flex;
+   flex-flow: row wrap;
+   text-align: center;
+   padding: 20px 0;
+}
+.secImg img{
+  width: 320px;
+  box-shadow: 2px 2px #02010a;
+}
+
+div [class*="box"], img{
+  flex:1 1 50%;
+  transition: 1s;
+}
+
+.box1 img:hover{
+  transform: rotate(10deg);
+  box-shadow: 2px 2px #82c3a6;
+}
+.box2 img:hover{
+  transform: translate(20px, -5px);
+  box-shadow: 2px 2px #82c3a6;
+}
+
+.pie{
+  margin: 0 0px 0 50px;
+  padding: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.pie ul li{
+  list-style:none;
+  vertical-align: super;
+  padding:5px 0
+}
+
+.pie ul img{
+  width: 25px;
+  margin-bottom:-9px;
+  margin-right:5px;
+}
+
+div [class*="td"]{
+  flex: 1 1 15%;
 }
 
 @media all and (min-width:900px) {
