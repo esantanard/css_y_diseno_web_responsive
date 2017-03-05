@@ -166,7 +166,6 @@ div [class*="td"]{
 footer{
   border-radius: 0 0 10px 10px;
   background-color: #C6d5c5;
-  flex:
 }
 
 @media (max-width:899px) {
@@ -192,6 +191,7 @@ footer{
   .pie{
     display: block;
     font-size: 18px;
+    margin-left: 20px;
   }
 
   .pie > .td{
