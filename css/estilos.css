@@ -8,20 +8,49 @@ body{
     font-family: 'Dancing Script', cursive;
 }
 
+#contenido{
+  width: 900px;
+  margin: auto;
+  animation: AnimacionCuerpo 2s;
+}
+
+
+@-webkit-keyframes AnimacionCuerpo{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+
+
 header{
   background-color: #5b7989;
   border-radius: 10px 10px 0 0;
+  padding: 20px;
 }
 
 header h1{
   text-shadow: 2px 2px #02010a;
   color: white;
+  float: left;
 }
 
 footer{
   border-radius: 0 0 10px 10px;
   background-color: #C6d5c5;
   flex:
+}
+nav a{
+  color:#FFF;
+}
+nav a:nth-child(2){
+  margin:0 20px;
 }
 
 a.activo{
@@ -88,11 +117,36 @@ div [class*="td"]{
   flex: 1 1 15%;
 }
 
-@media all and (min-width:900px) {
+nav {
+    text-align: right;
+    margin-top: 10px;
+}
+
+@media (max-width:899px) {
+  header h1{
+    float: none;
+  }
 
   #contenido{
-    width: 900px;
+    max-width: 100%;
     margin: auto;
   }
 
+  nav {
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  .pie{
+    display: block;
+    font-size: 18px;
+  }
+
+  .pie > .td{
+    margin-top: 40px;
+  }
+
+  .pie > .td:first-child{
+    margin: 0
+  }
 }
